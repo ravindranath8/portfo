@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Portfolio – Showcasing My Work in AI, Machine Learning & Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Card hover effect */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        /* Gradient overlay for project images */
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+        }
+        /* Profile image styling */
+        .profile-img {
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-gray-200 font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-indigo-700 text-white p-4 sticky top-0 z-20 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight">Data Science Portfolio</h1>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-indigo-200 transition">About</a>
+                <a href="#projects" class="hover:text-indigo-200 transition">Projects</a>
+                <a href="#contact" class="hover:text-indigo-200 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-24">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold mb-4 tracking-tight">Welcome to My Data Science Portfolio</h2>
+            <p class="text-xl max-w-2xl mx-auto">Showcasing My Work in AI, Machine Learning & Analytics</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center max-w-4xl mx-auto gap-8">
+                <img src="https://images.unsplash.com/photo-1516321310764-8d8c9460b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Profile Image" class="profile-img w-48 h-48 rounded-full object-cover">
+                <div class="text-center md:text-left">
+                    <p class="text-lg mb-4">
+                        I'm a passionate Data Scientist with expertise in building data-driven solutions using Python, SQL, Machine Learning, and visualization tools like Tableau. My skills include predictive modeling, deep learning, and natural language processing, with a focus on delivering actionable insights for real-world problems.
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-medium">Python</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-medium">SQL</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-medium">Machine Learning</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-medium">Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-image relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-b1f3a0c3f8e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Customer Churn Prediction" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Customer Churn Prediction</h3>
+                        <p class="text-gray-600 mb-4">Predicted churn risk using historical data and explained feature importance.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>Tools:</strong> Python, Scikit-learn, XGBoost, Streamlit</p>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition" onclick="showDetails('Customer Churn Prediction', 'Predicted churn risk using historical data and explained feature importance.', 'Python, Scikit-learn, XGBoost, Streamlit')">View Details</button>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-image relative h-48">
+                        <img src="https://images.unsplash.com/photo-1516321310764-8d8c9460b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Image Classification" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Image Classification for Quality Control</h3>
+                        <p class="text-gray-600 mb-4">Automated product image classification in a factory setting.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>Tools:</strong> CNN, TensorFlow, OpenCV</p>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition" onclick="showDetails('Image Classification for Quality Control', 'Automated product image classification in a factory setting.', 'CNN, TensorFlow, OpenCV')">View Details</button>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-image relative h-48">
+                        <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Text Generation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Text Generation for Customer Support</h3>
+                        <p class="text-gray-600 mb-4">Built a chatbot to generate support responses automatically.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>Tools:</strong> GPT, FastAPI, NLP, TensorFlow</p>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition" onclick="showDetails('Text Generation for Customer Support', 'Built a chatbot to generate support responses automatically.', 'GPT, FastAPI, NLP, TensorFlow')">View Details</button>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-image relative h-48">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200&q=80" alt="Sales Dashboard" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sales Dashboard with Tableau</h3>
+                        <p class="text-gray-600 mb-4">Interactive dashboard tracking sales KPIs across regions.</p>
+                        <p class="text-sm text-gray-500 mb-4"><strong>Tools:</strong> Tableau, Excel</p>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition" onclick="showDetails('Sales Dashboard with Tableau', 'Interactive dashboard tracking sales KPIs across regions.', 'Tableau, Excel')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-10">Get in Touch</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Feel free to connect with me through the following platforms:</p>
+            <div class="flex justify-center gap-8">
+                <a href="https://github.com/yourusername" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75.98.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.25 2.75-.98 2.75-.98.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:your.email@example.com" class="text-indigo-600 hover:text-indigo-800 transition flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-700 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">© 2025 Data Science Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="fixed inset-0 bg-gray-900 bg-opacity-60 flex items-center justify-center hidden z-30">
+        <div class="bg-white p-8 rounded-xl max-w-lg w-full shadow-2xl">
+            <h3 id="modalTitle" class="text-2xl font-bold mb-4 text-gray-800"></h3>
+            <p id="modalDescription" class="text-gray-600 mb-4"></p>
+            <p id="modalTools" class="text-sm text-gray-500 mb-6"></p>
+            <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show project details in modal
+        function showDetails(title, description, tools) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = description;
+            document.getElementById('modalTools').innerHTML = `<strong>Tools:</strong> ${tools}`;
+            document.getElementById('projectModal').classList.remove('hidden');
+        }
+
+        // Function to close modal
+        function closeModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('projectModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
